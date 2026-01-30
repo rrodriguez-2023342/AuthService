@@ -11,7 +11,7 @@ public class UserProfile
 
     [Required]
     [MaxLength(16)]
-    public string UserID { get; set; } = string.Empty;
+    public string UserId { get; set; } = string.Empty;
 
     [MaxLength(512)]
     public string ProfilePicture { get; set; } = string.Empty;

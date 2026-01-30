@@ -12,9 +12,9 @@ public class Role
     [MaxLength(100, ErrorMessage = "El nombre del rol no puede superar los 100 caracteres")]
     public string Name {get; set;} = string.Empty;
 
-    public DateTime CreateAT {get; set;} = DateTime.UtcNow;
+    public DateTime CreatedAt {get; set;} = DateTime.UtcNow;
 
-    public DateTime UpdateAT {get; set;} = DateTime.UtcNow;
+    public DateTime UpdatedAt {get; set;} = DateTime.UtcNow;
 
     public ICollection<UserRole> UserRoles {get; set;} = [];
 }

@@ -17,7 +17,7 @@ public class User
 
     [Required(ErrorMessage = "El nombre de usuario es obligatorio.")]
     [MaxLength(25, ErrorMessage = "EL nombre de usuario no puede tener mas de 25 caracteres")]
-    public string UserName {get; set;} = string.Empty;
+    public string Username {get; set;} = string.Empty;
 
     [Required(ErrorMessage = "El correo electronico es obligatorio")]
     [EmailAddress(ErrorMessage = "El correo electronico no tiene un formato valido.")]
