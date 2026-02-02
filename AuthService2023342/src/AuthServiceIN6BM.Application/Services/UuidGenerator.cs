@@ -3,7 +3,7 @@ using System.Text;
 
 namespace AuthServiceIN6BM.Application.Services;
 
-public static class UuidGenerato
+public static class UuidGenerator
 {
     private static readonly string Alphabet = "123456789ABCDEFGHJKMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz";
 
