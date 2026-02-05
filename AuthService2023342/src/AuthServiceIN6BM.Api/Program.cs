@@ -10,21 +10,21 @@ using System.Security.Cryptography.X509Certificates;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.host.UseSerilog((context, services, loggerConfiguration) =>
+builder.Host.UseSerilog((context, services, loggerConfiguration) =>
     loggerConfiguration
-        .ReadFrom.configuration(context.configuration)
+        .ReadFrom.Configuration(context.Configuration)
         .ReadFrom.Services(services));
 
-builder.Services.AddControllers(OptionalAttribute =>
+builder.Services.AddControllers(options  =>
 {
-    options.ModelBinderProvider.Insert(0, new FileDataModelBinderProvider());
+    options.ModelBinderProviders.Insert(0, new FileDataModelBinderProvider());
 })
 .AddJsonOptions(o =>
 {
     o.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
 });
 
-builder.Services.AddApplicationServices(builder.configuration);
+builder.Services.AddApplicationServices(builder.Configuration);
 
 var app = builder.Build();
 
@@ -66,10 +66,10 @@ app.UseSecurityHeaders(policies => policies
 
 // Core middlewares
 app.UseHttpsRedirection();
-app.UserCors("DefaultCorsPolicy");
-app.UseRateLimiter();
-app.UseAuthentication();
-app.Authorization();
+app.UseCors("DefaultCorsPolicy");
+//app.UseRateLimiter();
+//app.UseAuthentication();
+//app.Authorization();
 
 app.MapControllers();
 
@@ -82,7 +82,7 @@ app.MapGet("/health", () =>
         status = "Healthy",
         timestamps = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss:fffz")
     };
-    return Results.ok(response);
+    return Results.Ok(response);
 });
 
 // Startup log: addresses and health endpoint

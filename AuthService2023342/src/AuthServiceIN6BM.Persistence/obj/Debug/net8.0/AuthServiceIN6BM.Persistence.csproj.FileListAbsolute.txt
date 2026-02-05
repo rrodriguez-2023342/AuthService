@@ -33,3 +33,5 @@ C:\Users\Informatica\Desktop\AuthService\AuthService2023342\src\AuthServiceIN6BM
 C:\Users\Informatica\Desktop\AuthService\AuthService2023342\src\AuthServiceIN6BM.Persistence\obj\Debug\net8.0\refint\AuthServiceIN6BM.Persistence.dll
 C:\Users\Informatica\Desktop\AuthService\AuthService2023342\src\AuthServiceIN6BM.Persistence\obj\Debug\net8.0\AuthServiceIN6BM.Persistence.pdb
 C:\Users\Informatica\Desktop\AuthService\AuthService2023342\src\AuthServiceIN6BM.Persistence\obj\Debug\net8.0\ref\AuthServiceIN6BM.Persistence.dll
+C:\Users\Informatica\Desktop\AuthService\AuthService2023342\src\AuthServiceIN6BM.Persistence\bin\Debug\net8.0\AuthServiceIN6BM.Persistence.runtimeconfig.json
+C:\Users\Informatica\Desktop\AuthService\AuthService2023342\src\AuthServiceIN6BM.Persistence\obj\Debug\net8.0\AuthServiceIN6BM.Persistence.genruntimeconfig.cache
