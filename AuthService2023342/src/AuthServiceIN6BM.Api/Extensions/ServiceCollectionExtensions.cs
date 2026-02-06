@@ -1,4 +1,5 @@
 using AuthServiceIN6BM.Application.Interfaces;
+using AuthServiceIN6BM.Application.Services;
 using AuthServiceIN6BM.Domain.Interfaces;
 using AuthServiceIN6BM.Persistence.Data;
 using AuthServiceIN6BM.Persistence.Repositories;
@@ -22,6 +23,12 @@ public static class ServiceCollectionExtensions
 
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IRoleRepository, RoleRepository>();
+        services.AddScoped<IAuthService, Application.Services.AuthService>();
+        services.AddScoped<IUserManagementService, UserManagementService>();
+        services.AddScoped<IPasswordHashService, PasswordHashService>();
+        services.AddScoped<IJwtTokenService, JwtTokenService>();
+        services.AddScoped<ICloudinaryService, CloudinaryService>();
+        services.AddScoped<IEmailService, EmailService>();
 
         services.AddHealthChecks();
 

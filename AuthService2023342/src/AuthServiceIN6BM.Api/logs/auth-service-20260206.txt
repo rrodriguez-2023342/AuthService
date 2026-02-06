@@ -1,0 +1,22 @@
+[2026-02-06 10:54:23 INF] Checking database connection... {"SourceContext":"Program"}
+[2026-02-06 10:54:24 INF] Database ready. Running seed data... {"SourceContext":"Program"}
+[2026-02-06 10:54:25 INF] Database initialization completed successfully {"SourceContext":"Program"}
+[2026-02-06 10:54:25 INF] AuthService API is running at http://localhost:5004. Health endpoint: http://localhost:5004/health {"SourceContext":"Program"}
+[2026-02-06 10:57:21 WRN] Failed to determine the https port for redirect. {"EventId":{"Id":3,"Name":"FailedToDeterminePort"},"SourceContext":"Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware","RequestId":"0HNJ5K35JTFJK:00000001","RequestPath":"/health","ConnectionId":"0HNJ5K35JTFJK"}
+[2026-02-06 10:57:21 INF] HTTP GET /health responded 200 in 180.7846 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5K35JTFJK:00000001","ConnectionId":"0HNJ5K35JTFJK"}
+[2026-02-06 10:57:21 INF] HTTP GET /favicon.ico responded 404 in 2.4189 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5K35JTFJK:00000002","ConnectionId":"0HNJ5K35JTFJK"}
+[2026-02-06 10:57:25 INF] HTTP GET / responded 404 in 2.7098 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5K35JTFJK:00000003","ConnectionId":"0HNJ5K35JTFJK"}
+[2026-02-06 10:59:45 INF] Checking database connection... {"SourceContext":"Program"}
+[2026-02-06 10:59:45 INF] Database ready. Running seed data... {"SourceContext":"Program"}
+[2026-02-06 10:59:46 INF] Database initialization completed successfully {"SourceContext":"Program"}
+[2026-02-06 10:59:46 INF] AuthService API is running at http://localhost:5004. Health endpoint: http://localhost:5004/health {"SourceContext":"Program"}
+[2026-02-06 11:29:04 WRN] Failed to determine the https port for redirect. {"EventId":{"Id":3,"Name":"FailedToDeterminePort"},"SourceContext":"Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware","RequestId":"0HNJ5KKSR7LHE:00000001","RequestPath":"/api/v1/register","ConnectionId":"0HNJ5KKSR7LHE"}
+[2026-02-06 11:29:04 INF] HTTP POST /api/v1/register responded 404 in 39.7640 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5KKSR7LHE:00000001","ConnectionId":"0HNJ5KKSR7LHE"}
+[2026-02-06 11:30:44 INF] HTTP POST /api/v1/register responded 404 in 2.1654 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5KKSR7LHE:00000002","ConnectionId":"0HNJ5KKSR7LHE"}
+[2026-02-06 11:46:59 INF] Checking database connection... {"SourceContext":"Program"}
+[2026-02-06 11:47:00 INF] Database ready. Running seed data... {"SourceContext":"Program"}
+[2026-02-06 11:47:01 INF] Database initialization completed successfully {"SourceContext":"Program"}
+[2026-02-06 11:47:01 INF] AuthService API is running at http://localhost:5004. Health endpoint: http://localhost:5004/health {"SourceContext":"Program"}
+[2026-02-06 11:47:14 WRN] Failed to determine the https port for redirect. {"EventId":{"Id":3,"Name":"FailedToDeterminePort"},"SourceContext":"Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware","RequestId":"0HNJ5KV1JFBQD:00000001","RequestPath":"/api/v1/register","ConnectionId":"0HNJ5KV1JFBQD"}
+[2026-02-06 11:47:14 INF] HTTP POST /api/v1/register responded 404 in 34.4689 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5KV1JFBQD:00000001","ConnectionId":"0HNJ5KV1JFBQD"}
+[2026-02-06 11:48:06 INF] HTTP POST /api/v1/register4 responded 404 in 1.9176 ms {"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HNJ5KV1JFBQD:00000002","ConnectionId":"0HNJ5KV1JFBQD"}

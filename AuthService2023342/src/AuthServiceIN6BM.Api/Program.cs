@@ -1,12 +1,11 @@
 
 using AuthServiceIN6BM.Persistence.Data;
+using AuthServiceIN6BM.Api.Middlewares;
 using AuthServiceIN6BM.Api.Extensions;
 using AuthServiceIN6BM.Api.ModelBinders;
 using Serilog;
 using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Hosting.Server.Features;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +24,9 @@ builder.Services.AddControllers(options  =>
 });
 
 builder.Services.AddApplicationServices(builder.Configuration);
+builder.Services.AddApiDocumentation();
+builder.Services.AddJwtAuthentication(builder.Configuration);
+builder.Services.AddRateLimitingPolicies();
 
 var app = builder.Build();
 
@@ -63,13 +65,14 @@ app.UseSecurityHeaders(policies => policies
 );
 
 // Global exception handling
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 // Core middlewares
 app.UseHttpsRedirection();
 app.UseCors("DefaultCorsPolicy");
-//app.UseRateLimiter();
-//app.UseAuthentication();
-//app.Authorization();
+app.UseRateLimiter();
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 
